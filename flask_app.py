@@ -3,12 +3,13 @@ import requests
 import json
 from flask import Flask, request
 import apiai
+from config import Config
 
 # FB messenger credentials
-ACCESS_TOKEN = "EAABkH0RS4H0BACzemr8U6gM971bXgNoLdFvmzzTaUg4NJlTvJyfGZArsTlqc8tZArCljMymGa95ZBLtZCRmttyzQipJgV40ZA0cVXHMMrxKHn9gLJit6aUhh5GkVklajw8kzaD0OHiuVQNCXI50Gs7KNrWWjUvdZAHi4lptlla5wZDZD"
-
+ACCESS_TOKEN=Config.ACCESS_TOKEN
 # api.ai credentials
-CLIENT_ACCESS_TOKEN = "e1513105e1fb433b918990c14e8063d2"
+CLIENT_ACCESS_TOKEN=Config.CLIENT_ACCESS_TOKEN
+
 ai = apiai.ApiAI(CLIENT_ACCESS_TOKEN)
 
 app = Flask(__name__)
